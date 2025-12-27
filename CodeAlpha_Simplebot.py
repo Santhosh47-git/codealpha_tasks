@@ -1,8 +1,7 @@
 def get_bot_response(user_input):
-    # Convert to lowercase and remove extra spaces for better matching
+   
     user_input = user_input.lower().strip()
 
-    # Rule-based logic using if-elif-else
     if "hello" in user_input or "hi" in user_input:
         return "Hi there! How can I help you today?"
     
@@ -27,18 +26,16 @@ def main():
     print("(Type 'bye' to exit the chat)\n")
 
     while True:
-        # Get input from the user
+      
         user_text = input("You: ")
         
-        # Get the response from our function
         response = get_bot_response(user_text)
         
-        # Print the response
         print(f"Bot: {response}")
         
-        # Break the loop if the user says goodbye
         if "goodbye" in response.lower() or "bye" in response.lower():
             break
 
 if __name__ == "__main__":
+
     main()
